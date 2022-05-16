@@ -1,0 +1,22 @@
+<%# #diplay <%=  %>
+<%# #not display <%  %>
+<% coach = "-Your coach" %>
+<% yourself = "-Yourself" %>
+
+<h1>Stupid Coaching</h1>
+
+<div class="div1">
+  <p><%= @ask  %></p>
+  <p><%= yourself%></p>
+</div>
+<div class="div2">
+  <% if @ask == "I am going to work!" %>
+    <p>Great!</p>
+  <% elsif @ask.last == "?" %>
+    <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+    <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+    <p><%= coach %></p>
+</div>
+<%= link_to "You want to ask another question?", ask_path %>
